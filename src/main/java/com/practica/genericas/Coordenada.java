@@ -50,8 +50,9 @@ public class Coordenada {
 		if (getClass() != obj.getClass())
 			return false;
 		Coordenada other = (Coordenada) obj;
-		if ((Float.floatToIntBits(latitud) != Float.floatToIntBits(other.latitud))||(Float.floatToIntBits(longitud) != Float.floatToIntBits(other.longitud)))
+		if (Float.floatToIntBits(latitud) != Float.floatToIntBits(other.latitud))
 			return false;
-		return true;
+		return (Float.floatToIntBits(longitud) == Float.floatToIntBits(other.longitud));
 	}
+
 }
